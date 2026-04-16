@@ -105,8 +105,9 @@ function gameLoop() {
             player.x + player.w > obstacles[i].x &&
             player.y < obstacles[i].y + obstacles[i].h &&
             player.y + player.h > obstacles[i].y) {
-            alert('GAME OVER! Score: ' + Math.floor(spawnCounter / 6));
-            location.reload();
+            setTimeout(() => {
+                window.location.reload();
+            }, 500);
         }
     }
     
